@@ -39,13 +39,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
         menu_Usuarios = new javax.swing.JMenuItem();
         menu_Servicos = new javax.swing.JMenu();
         menu_ServicosRel = new javax.swing.JMenuItem();
+        MenuNotas = new javax.swing.JMenuItem();
         menu_Ajuda = new javax.swing.JMenu();
         menu_ajuda_Sobre = new javax.swing.JMenuItem();
         menu_opcoes = new javax.swing.JMenu();
         menu_opcoes_sair = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("ElipseOS");
+        setTitle("Instituição programadores do amanhã");
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
@@ -74,10 +75,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         Principal_OS.setIcon(new javax.swing.ImageIcon("C:\\Users\\josej\\Pictures\\Icones\\logo_os.png")); // NOI18N
 
-        menu_Cadastro.setText("Cadastro");
+        menu_Cadastro.setText("Inicio");
 
         menu_Cliente.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK));
-        menu_Cliente.setText("Cliente");
+        menu_Cliente.setText("Àrea do Aluno");
         menu_Cliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 menu_ClienteActionPerformed(evt);
@@ -86,7 +87,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         menu_Cadastro.add(menu_Cliente);
 
         menu_Usuarios.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.ALT_MASK));
-        menu_Usuarios.setText("Usuários");
+        menu_Usuarios.setText("Àrea do Professor");
         menu_Usuarios.setEnabled(false);
         menu_Usuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,6 +104,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
         menu_ServicosRel.setText("Serviços");
         menu_ServicosRel.setEnabled(false);
         menu_Servicos.add(menu_ServicosRel);
+
+        MenuNotas.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.ALT_MASK));
+        MenuNotas.setText("Notas");
+        MenuNotas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MenuNotasActionPerformed(evt);
+            }
+        });
+        menu_Servicos.add(MenuNotas);
 
         Menu.add(menu_Servicos);
 
@@ -201,6 +211,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
         desktop.add(usuario);
     }//GEN-LAST:event_menu_UsuariosActionPerformed
 
+    private void MenuNotasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuNotasActionPerformed
+        TelaNotas notas = new TelaNotas();
+        notas.setVisible(true);
+        desktop.add(notas);
+    }//GEN-LAST:event_MenuNotasActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -240,6 +256,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel LblData;
     public static javax.swing.JLabel LblUsuario;
     private javax.swing.JMenuBar Menu;
+    private javax.swing.JMenuItem MenuNotas;
     private javax.swing.JLabel Principal_OS;
     private javax.swing.JDesktopPane desktop;
     private javax.swing.JMenu menu_Ajuda;
