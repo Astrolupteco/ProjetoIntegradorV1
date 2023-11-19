@@ -44,6 +44,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         menu_ajuda_Sobre = new javax.swing.JMenuItem();
         menu_opcoes = new javax.swing.JMenu();
         menu_opcoes_sair = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Instituição programadores do amanhã");
@@ -141,6 +143,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         menu_opcoes.add(menu_opcoes_sair);
 
         Menu.add(menu_opcoes);
+
+        jMenu1.setText("Material");
+
+        jMenuItem1.setText("Estudo");
+        jMenu1.add(jMenuItem1);
+
+        Menu.add(jMenu1);
 
         setJMenuBar(Menu);
 
@@ -259,6 +268,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem MenuNotas;
     private javax.swing.JLabel Principal_OS;
     private javax.swing.JDesktopPane desktop;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenu menu_Ajuda;
     private javax.swing.JMenu menu_Cadastro;
     private javax.swing.JMenuItem menu_Cliente;
