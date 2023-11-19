@@ -80,7 +80,7 @@ public class TelaCadastroFornecedor extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Primeiro acesso professor");
+        setTitle("Primeiro acesso fornecedor");
         setMaximumSize(new java.awt.Dimension(470, 396));
         setResizable(false);
 

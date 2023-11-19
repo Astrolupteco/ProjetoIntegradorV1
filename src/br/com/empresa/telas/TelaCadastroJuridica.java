@@ -82,7 +82,7 @@ public class TelaCadastroJuridica extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Primeiro acesso professor");
+        setTitle("Primeiro acesso pessoa juridica");
         setResizable(false);
 
         BtnCadastro.setText("Cadastrar");
