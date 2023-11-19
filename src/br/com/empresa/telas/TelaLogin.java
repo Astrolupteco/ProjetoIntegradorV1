@@ -36,7 +36,8 @@ public class TelaLogin extends javax.swing.JFrame {
             if (rs.next()){
                 //verifica o tipo de perfil do login
                 String perfil=rs.getString(6);
-                //System.err.println(perfil); verifica o perfil do login
+               // System.err.println(perfil); //verifica o perfil do login
+                
                 if(perfil.equals("Administrador")){
                     
                 TelaPrincipal principal = new TelaPrincipal();
@@ -50,14 +51,24 @@ public class TelaLogin extends javax.swing.JFrame {
                 this.dispose();//fecha a tela principal apos logar
                 conexao.close();
                 
-                }else{
+                }
+                else if((perfil.equals("Professor"))){//se for o professor habilita as seguintes funçoes no menu
+                
                 TelaPrincipal principal = new TelaPrincipal();
                 principal.setVisible(true);
-                TelaPrincipal.LblUsuario.setText(rs.getString(2));
-                
-                this.dispose();//fecha a tela principal apos logar
-                
-                conexao.close();
+                TelaPrincipal.menu_Cliente.setEnabled(false);
+                TelaPrincipal.menu_Usuarios.setEnabled(true);
+                TelaPrincipal.menu_ServicosRel.setEnabled(true);
+                TelaPrincipal.LblUsuario.setText(rs.getString(6));
+                TelaPrincipal.LblUsuario.setForeground(Color.red);
+                }
+                else
+                {
+                    TelaPrincipal principal = new TelaPrincipal();
+                    principal.setVisible(true);
+                    TelaPrincipal.LblUsuario.setText(rs.getString(2));                    
+                    this.dispose();//fecha a tela principal apos logar
+                    conexao.close();
                 }
                 
             }else{
@@ -221,9 +232,8 @@ public class TelaLogin extends javax.swing.JFrame {
 
     private void Cadas_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Cadas_buttonActionPerformed
         // TODO add your handling code here:
-    TelaCadastro cadastro = new TelaCadastro();
-    cadastro.setVisible(true);
-        
+    TelaPreCadastro primeiro = new TelaPreCadastro();
+    primeiro.setVisible(true);
         
     }//GEN-LAST:event_Cadas_buttonActionPerformed
 

@@ -41,6 +41,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         menu_ServicosRel = new javax.swing.JMenuItem();
         MenuNotas = new javax.swing.JMenuItem();
         menu_Ajuda = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
         menu_ajuda_Sobre = new javax.swing.JMenuItem();
         menu_opcoes = new javax.swing.JMenu();
         menu_opcoes_sair = new javax.swing.JMenuItem();
@@ -105,6 +106,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         menu_ServicosRel.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.ALT_MASK));
         menu_ServicosRel.setText("Serviços");
         menu_ServicosRel.setEnabled(false);
+        menu_ServicosRel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu_ServicosRelActionPerformed(evt);
+            }
+        });
         menu_Servicos.add(menu_ServicosRel);
 
         MenuNotas.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.ALT_MASK));
@@ -119,6 +125,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
         Menu.add(menu_Servicos);
 
         menu_Ajuda.setText("Ajuda");
+
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_J, java.awt.event.InputEvent.ALT_MASK));
+        jMenuItem2.setText("Avaliações");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        menu_Ajuda.add(jMenuItem2);
 
         menu_ajuda_Sobre.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, java.awt.event.InputEvent.ALT_MASK));
         menu_ajuda_Sobre.setText("Sobre");
@@ -193,8 +208,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
         //substitui as label da data para a data do sistema ao inicializar o form
-        Date data = new Date();
-        
+        Date data = new Date();        
         DateFormat formatador = DateFormat.getDateInstance(DateFormat.SHORT);      
         LblData.setText(formatador.format(data));
     }//GEN-LAST:event_formWindowActivated
@@ -225,6 +239,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
         notas.setVisible(true);
         desktop.add(notas);
     }//GEN-LAST:event_MenuNotasActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        TelaAvaliacao avaliacao = new TelaAvaliacao();
+        avaliacao.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void menu_ServicosRelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menu_ServicosRelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_menu_ServicosRelActionPerformed
 
     /**
      * @param args the command line arguments
@@ -265,14 +288,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel LblData;
     public static javax.swing.JLabel LblUsuario;
     private javax.swing.JMenuBar Menu;
-    private javax.swing.JMenuItem MenuNotas;
+    public static javax.swing.JMenuItem MenuNotas;
     private javax.swing.JLabel Principal_OS;
     private javax.swing.JDesktopPane desktop;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenu menu_Ajuda;
     private javax.swing.JMenu menu_Cadastro;
-    private javax.swing.JMenuItem menu_Cliente;
+    public static javax.swing.JMenuItem menu_Cliente;
     private javax.swing.JMenu menu_Servicos;
     public static javax.swing.JMenuItem menu_ServicosRel;
     public static javax.swing.JMenuItem menu_Usuarios;
