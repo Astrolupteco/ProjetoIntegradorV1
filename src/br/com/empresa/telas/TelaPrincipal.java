@@ -37,6 +37,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         menu_Cadastro = new javax.swing.JMenu();
         menu_Cliente = new javax.swing.JMenuItem();
         menu_Usuarios = new javax.swing.JMenuItem();
+        Menu_fornecedor = new javax.swing.JMenuItem();
         menu_Servicos = new javax.swing.JMenu();
         menu_ServicosRel = new javax.swing.JMenuItem();
         MenuNotas = new javax.swing.JMenuItem();
@@ -82,6 +83,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         menu_Cliente.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK));
         menu_Cliente.setText("Àrea do Aluno");
+        menu_Cliente.setEnabled(false);
         menu_Cliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 menu_ClienteActionPerformed(evt);
@@ -98,6 +100,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         menu_Cadastro.add(menu_Usuarios);
+
+        Menu_fornecedor.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.ALT_MASK));
+        Menu_fornecedor.setText("Àrea do Fornecedor");
+        Menu_fornecedor.setEnabled(false);
+        menu_Cadastro.add(Menu_fornecedor);
 
         Menu.add(menu_Cadastro);
 
@@ -289,6 +296,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     public static javax.swing.JLabel LblUsuario;
     private javax.swing.JMenuBar Menu;
     public static javax.swing.JMenuItem MenuNotas;
+    public static javax.swing.JMenuItem Menu_fornecedor;
     private javax.swing.JLabel Principal_OS;
     private javax.swing.JDesktopPane desktop;
     private javax.swing.JMenu jMenu1;

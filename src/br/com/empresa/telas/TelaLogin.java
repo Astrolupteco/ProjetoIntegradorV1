@@ -36,7 +36,7 @@ public class TelaLogin extends javax.swing.JFrame {
             if (rs.next()){
                 //verifica o tipo de perfil do login
                 String perfil=rs.getString(6);
-               // System.err.println(perfil); //verifica o perfil do login
+                System.err.println(perfil); //verifica o perfil do login
                 
                 if(perfil.equals("Administrador")){
                     
@@ -58,6 +58,15 @@ public class TelaLogin extends javax.swing.JFrame {
                 principal.setVisible(true);
                 TelaPrincipal.menu_Cliente.setEnabled(false);
                 TelaPrincipal.menu_Usuarios.setEnabled(true);
+                TelaPrincipal.menu_ServicosRel.setEnabled(true);
+                TelaPrincipal.LblUsuario.setText(rs.getString(6));
+                TelaPrincipal.LblUsuario.setForeground(Color.red);
+                }
+                else if((perfil.equals("Fornecedor"))){//se for o professor habilita as seguintes funçoes no menu
+                
+                TelaPrincipal principal = new TelaPrincipal();
+                principal.setVisible(true);
+                TelaPrincipal.Menu_fornecedor.setEnabled(true);
                 TelaPrincipal.menu_ServicosRel.setEnabled(true);
                 TelaPrincipal.LblUsuario.setText(rs.getString(6));
                 TelaPrincipal.LblUsuario.setForeground(Color.red);

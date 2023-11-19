@@ -71,6 +71,11 @@ public class TelaPreCadastro extends javax.swing.JFrame {
         });
 
         jButton5.setText("Pessoa juridica");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -129,7 +134,10 @@ public class TelaPreCadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_professorActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+         //torna visivel a tela de cadastro da pessoa fisica
+    TelaCadastroFisica cadastroPessoaFisica = new TelaCadastroFisica();
+    cadastroPessoaFisica.setVisible(true);
+    this.dispose();//fecha a tela de pre cadastro
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void btn_fornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_fornecedorActionPerformed
@@ -138,6 +146,13 @@ public class TelaPreCadastro extends javax.swing.JFrame {
     cadastroFornecedor.setVisible(true);
     this.dispose();//fecha a tela de pre cadastro
     }//GEN-LAST:event_btn_fornecedorActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    //torna visivel a tela de cadastro do professor
+    TelaCadastroJuridica cadastroJuridica = new TelaCadastroJuridica();
+    cadastroJuridica.setVisible(true);
+    this.dispose();//fecha a tela de pre cadastro
+    }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
      * @param args the command line arguments
