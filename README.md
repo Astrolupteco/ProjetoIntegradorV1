@@ -1,5 +1,5 @@
 # ProjetoIntegradorV1
-Projeto integrador
+Este é um protótipo para gestão de uma instituição de ensino.
 
 1° Tela Inicial
 
